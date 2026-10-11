@@ -1,0 +1,24 @@
+{
+  "name": "@kawa/design",
+  "version": "1.0.0",
+  "description": "The kawa design system: tokens, base styles and components shared by kawa-studio and kawa-docs.",
+  "license": "AGPL-3.0-only",
+  "files": [
+    "index.css",
+    "tokens.css",
+    "base.css",
+    "components.css",
+    "assets"
+  ],
+  "exports": {
+    ".": "./index.css",
+    "./index.css": "./index.css",
+    "./tokens.css": "./tokens.css",
+    "./base.css": "./base.css",
+    "./components.css": "./components.css",
+    "./assets/*": "./assets/*"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}

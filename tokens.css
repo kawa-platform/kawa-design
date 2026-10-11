@@ -1,0 +1,147 @@
+/*
+ * kawa design tokens. Dark is the default (:root) and html[data-theme='dark']; light is
+ * html[data-theme='light']. Docusaurus switches themes with the same attribute.
+ *
+ * Theme-independent scales first, then the colour themes.
+ */
+
+:root {
+    /* Status / secondary-accent ramp steps the themes do not redefine. */
+    --color-accent-2-200: #ffdee6;
+    --color-accent-2-300: #ffc0d0;
+    --color-accent-2-400: #ff90b1;
+    --color-accent-2-500: #ff458e;
+    --color-accent-2-900: #4b1528;
+
+    --font-heading-weight: 600;
+
+    --space-1: 5px;
+    --space-2: 10px;
+    --space-3: 15px;
+    --space-4: 20px;
+    --space-5: 25px;
+    --space-6: 30px;
+    --space-8: 40px;
+
+    --radius-sm: 8px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 22px;
+
+    /* Elevation: soft, layered navy-tinted shadows. */
+    --shadow-sm: 0 1px 2px color-mix(in srgb, #0b1a2e 6%, transparent), 0 1px 1px color-mix(in srgb, #0b1a2e 4%, transparent);
+    --shadow-md: 0 8px 24px -8px color-mix(in srgb, #0b1a2e 16%, transparent), 0 2px 6px -2px color-mix(in srgb, #0b1a2e 6%, transparent);
+    --shadow-lg: 0 28px 60px -16px color-mix(in srgb, #0b1a2e 30%, transparent), 0 8px 18px -8px color-mix(in srgb, #0b1a2e 12%, transparent);
+}
+
+/* kawa theme: Ink Black / Prussian / Oxford navy with School Bus Yellow and Gold. */
+
+:root,
+html[data-theme='dark'] {
+    --color-bg: #020b18;
+    --color-surface: #07182b;
+    --color-elevated: #0c2238;
+    --color-text: #ffffff;
+    --color-accent: #22d3ee;
+    --color-accent-2: #f87171;
+    --success: #34d399;
+    --warning: #fbbf24;
+    --error: #f87171;
+    --brand: #c9a227;
+    --on-brand: #020b18;
+    --brand-text: #c2a54e;
+    --color-divider: #19344b;
+    --color-neutral-100: #07182b;
+    --color-neutral-200: #0c2238;
+    --color-neutral-300: #19344b;
+    --color-neutral-400: #19344b;
+    --color-neutral-500: #adc0d2;
+    --color-neutral-600: #adc0d2;
+    --color-neutral-700: #dfebf5;
+    --color-neutral-800: #f5f9ff;
+    --color-neutral-900: #ffffff;
+    --color-accent-100: #07293a;
+    --color-accent-200: #0b3b52;
+    --color-accent-300: #12586f;
+    --color-accent-400: #67e8f9;
+    --color-accent-500: #22d3ee;
+    --color-accent-600: #67e8f9;
+    --color-accent-700: #22d3ee;
+    --color-accent-800: #67e8f9;
+    --color-accent-900: #a5f3fc;
+    --color-accent-2-100: #f87171;
+    --color-accent-2-600: #f87171;
+    --color-accent-2-700: #f87171;
+    --color-accent-2-800: #020b18;
+    --code-pink: #e18bb7;
+    --on-accent: #020b18;
+    --chrome: #031426;
+    --chrome-line: #19344b;
+    --row-hover: #0c2238;
+    --muted: #adc0d2;
+    --faint: color-mix(in srgb, #adc0d2 72%, transparent);
+    /* Modern surfaces: floating panels, the active nav pill, focus ring and the canvas glow. */
+    --panel: color-mix(in srgb, #07182b 88%, transparent);
+    --panel-line: color-mix(in srgb, #adc0d2 12%, transparent);
+    --nav-active-bg: color-mix(in srgb, #c9a227 16%, transparent);
+    --nav-active-fg: #ffffff;
+    --ring: color-mix(in srgb, #22d3ee 32%, transparent);
+    --glow-1: color-mix(in srgb, #22d3ee 9%, transparent);
+    --glow-2: color-mix(in srgb, #c9a227 7%, transparent);
+    --font-heading: 'Geist', system-ui, sans-serif;
+    --font-body: 'Geist', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+}
+
+html[data-theme='light'] {
+    --color-bg: #eef2f7;
+    --color-surface: #ffffff;
+    --color-elevated: #ffffff;
+    --color-text: #020617;
+    --color-accent: #0891b2;
+    --color-accent-2: #dc2626;
+    --success: #059669;
+    --warning: #d97706;
+    --error: #dc2626;
+    --brand: #f5c518;
+    --on-brand: #0f172a;
+    --brand-text: #a06e00;
+    --color-divider: #dbe2ea;
+    --color-neutral-100: #f1f5f9;
+    --color-neutral-200: #e2e8f0;
+    --color-neutral-300: #cbd5e1;
+    --color-neutral-400: #cbd5e1;
+    --color-neutral-500: #475569;
+    --color-neutral-600: #475569;
+    --color-neutral-700: #334155;
+    --color-neutral-800: #0f172a;
+    --color-neutral-900: #020617;
+    --color-accent-100: #e0f2fe;
+    --color-accent-200: #bae6fd;
+    --color-accent-300: #7dd3fc;
+    --color-accent-400: #0f6b99;
+    --color-accent-500: #0891b2;
+    --color-accent-600: #0f6b99;
+    --color-accent-700: #0f6b99;
+    --color-accent-800: #0b556f;
+    --color-accent-900: #0f172a;
+    --color-accent-2-100: #fee2e2;
+    --color-accent-2-600: #dc2626;
+    --color-accent-2-700: #b91c1c;
+    --color-accent-2-800: #991b1b;
+    --code-pink: #b0457c;
+    --on-accent: #ffffff;
+    --chrome: #ffffff;
+    --chrome-line: #e4e9f0;
+    --row-hover: color-mix(in srgb, #0891b2 6%, transparent);
+    --muted: #475569;
+    --faint: #64748b;
+    --panel: color-mix(in srgb, #ffffff 86%, transparent);
+    --panel-line: color-mix(in srgb, #0b1a2e 8%, transparent);
+    /* The active nav pill uses the dark theme's Oxford navy, so light mode keeps its ink. */
+    --nav-active-bg: #0c2238;
+    --nav-active-fg: #ffffff;
+    --ring: color-mix(in srgb, #0891b2 22%, transparent);
+    --glow-1: color-mix(in srgb, #0891b2 10%, transparent);
+    --glow-2: color-mix(in srgb, #f5c518 14%, transparent);
+}
